@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Color Match App</title>
+    <meta charset="UTF-8">
+    <link type="text/css" href="match.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+
+<h1>COLOR MATCH</h1>
+	
+<form onsubmit="return false;">
+	<label for="vertical">Vertical cells: </label><input id="vertical" type="number" value="5" min="1" autofocus required>
+	<label for="horiizontal">Horizontal cells:  </label><input id="horizontal" type="number" value="5" min="1" required> 
+	<label for="time">Allowed time (in seconds):  </label><input id="time" type="number" value="300" min="1"  required> 
+	<button id="start">Start Game</button>
+ </form>
+
+<div id="game-container">
+	<div id="clock">5:00</div>
+	<table id="board"></table>
+</div>
+
+
+<div id="dev-tools">
+	<label for "run">Run in test mode </label><input id="run" type="checkbox">
+	<button id="test">Run tests</button>
+	<button id="stats">Show stats</button>
+</div>
+
+<div id="message"></div>
+</body>
+</html>

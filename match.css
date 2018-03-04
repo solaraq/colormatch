@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+form {
+    margin: 0 auto;
+    padding: 14px;
+}
+
+#game-container {
+    margin: 0 auto;
+    padding: 14px;
+}
+
+form {
+    width: 160px;
+    background-color: #fcfcff;
+    border-radius: 25px;
+    border: 1px solid #faeaea;
+    color: #1abfbf;
+}
+
+form input {
+    display: block;
+    margin: 3px 0 8px 1px;
+}
+
+table#board {
+    border-collapse: collapse;
+    position: relative;
+    margin: 0 auto;
+}
+
+#clock, #message {
+    text-align: center;
+    margin: 5px;
+}
+
+td {
+    height: 25px;
+    width: 25px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+}
+
+button {
+    border: 1px solid #cfcaca;
+    border-radius: 5px;
+    background: #f1f1f8;
+    margin-top: 15px;
+}
+
+.on {
+    background-color: #3082d3;
+}
+
+h1 {
+    text-align: center;
+    color: #9cc4e5;
+}
+
+#message p {
+    line-height: 2px;
+}
+
+#message {
+    padding: 15px;
+}
+
+#messagebox {
+    font-family: "Open Sans", sans-serif;
+    width: 350px;
+    position: absolute;
+    box-shadow: 4px 10px 10px #777;
+    visibility: hidden;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#messagebox .body {
+    height: 120px;
+    padding: 5px;
+    background-color: #eaeaec;
+}
+
+#messagebox .body span {
+    position: relative;
+    top: 25px;
+    left: 5px;
+    font-size: 14px;
+}
+
+#messagebox .header {
+    height: 24px;
+    background-color: #dfdede;
+}
+
+#messagebox .header span {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    font-size: 13px;
+}
+
+#messagebox .footer {
+    height: 36px;
+    background-color: #dfdede;
+}
+
+#messagebox .footer button {
+    margin-right: 10px;
+    float: right;
+    margin-top: 7px;
+    border-radius: 5px;
+    width: 53px;
+    border: 1px solid #bcbcda;
+}
+
+button#test {
+    margin-left: 3px;
+}

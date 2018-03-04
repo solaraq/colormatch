@@ -20,14 +20,14 @@ var colorMatch = (function() {
 		// Stores sequential index for table cells
 		tableCellIndex: [],
 
-        // Holds a reference to the vertical cells input element
-        verticalInputField: null,
+		// Holds a reference to the vertical cells input element
+		verticalInputField: null,
 
-        // Holds a reference to the horizontal cells input element
-        horizontalInputField: null,
+		// Holds a reference to the horizontal cells input element
+		horizontalInputField: null,
 
-        // Holds a reference to the time input element
-        timeInputField: null,
+		// Holds a reference to the time input element
+		timeInputField: null,
 
 		// Holds values entered for the game
 		gameData: {
@@ -187,13 +187,13 @@ var colorMatch = (function() {
 		 */
 		initTimer: function(time) {
 			var start = Date.now();  			
-            var clock = $('#clock');
+			var clock = $('#clock');
 
 			this.clockTimer = setInterval(function() {
 				var current = Date.now();  
 				var timeLeft =  Math.round((time - (current - start))/1000); 
 				var seconds = String(timeLeft%60);
-                clock.text(Math.floor(timeLeft/60) + ':' + (seconds.length === 1 ? ('0' + seconds) : seconds));
+				clock.text(Math.floor(timeLeft/60) + ':' + (seconds.length === 1 ? ('0' + seconds) : seconds));
 			}, 950);
 		},
 		
@@ -286,9 +286,9 @@ var colorMatch = (function() {
 			this.messageBox = messageBox;
 			this.gameBoard = document.querySelector('#board');
 
-            this.verticalInputField = document.querySelector('#vertical');
-            this.horizontalInputField = document.querySelector('#horizontal');
-            this.timeInputField = document.querySelector('#time');
+			this.verticalInputField = document.querySelector('#vertical');
+			this.horizontalInputField = document.querySelector('#horizontal');
+			this.timeInputField = document.querySelector('#time');
 			
 			$('form button#start').on('click', $.proxy(function() {
 				var gameData = this.getFormData();
@@ -316,12 +316,12 @@ var colorMatch = (function() {
 			
 			// Dev tool buttons
 			$('button#test').on('click', $.proxy(function() {
-                this.assertInitialBoardState();
+				this.assertInitialBoardState();
 			}, this));
 			
 			$('button#stats').on('click', $.proxy(function() {
 				document.querySelector('#message').innerHTML = '';
-                this.tableCellIndex.forEach(function(item) {
+				this.tableCellIndex.forEach(function(item) {
 					document.querySelector('#message').innerHTML += '<p>Cell ' + String(item[0]) + ':' + String(item[1]) + ' clicked ' + String(item[2]) + ' times ';
 				});
 			}, this));
